@@ -1,32 +1,34 @@
 package projectpackage;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
+//import java.sql.ResultSet;
+//import java.sql.SQLException;
 import java.util.Scanner;
-import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
+//import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
-public class MainMenu {
+public class MainMenu{
 	
+	public static DBconnection con;
 	public static Scanner kbd = new Scanner(System.in);
 	
 	public static void main (String[] args){
-		
-		
 		
 	}
 	
 	public static void processChoice(int menuOptions) {
     	switch (menuOptions) {
 	    	case 1: // go to customer menu
-	    		customerMenu();
+
 	    		break;
 	    	case 2: // go to product menu
-	    		productMenu();
+//	    		productMenu();
 	    		break;
 	    	case 3: // go to order menu
-	    		orderMenu();
+
 	    		break;
 	    	case 4: // Exit the product menu option or exit program na??
+	    		break;
+	    	case 5: 
+	    		System.exit(0);
 	    		break;
     	}
     }

@@ -1,11 +1,14 @@
 package projectpackage;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Scanner;
-import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
+//import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
-public class ProductMenu {
+public class ProductMenu extends MainMenu{
+	
+	public ProductMenu(){
+		
+	}
 	
 	public static Scanner kbd = new Scanner(System.in);
 	
@@ -64,10 +67,30 @@ public class ProductMenu {
 	
 	public static void createProduct(){
 		
+		try
+		{
+		  // create a java mysql database connection
+		  String myDriver = "org.gjt.mm.mysql.Driver";
+		  String myUrl = "jdbc:mysql://localhost/order_system";
+		  Class.forName(myDriver);
+		  Connection conn = DriverManager.getConnection(myUrl, "root", "");
+
+		  // your prepstatements goes here...
+
+		  conn.close();
+		}
+		catch (Exception e)
+		{
+		  System.err.println("Got an exception! ");
+		  System.err.println(e.getMessage());
+		}
+		
 		
 	}
 	
 	public static void viewProduct(){
+		
+		
 		
 	}
 	
