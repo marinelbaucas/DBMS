@@ -22,7 +22,7 @@ public class product {
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/order_system?autoReconnect=true&useSSL=false", "root","");      
             Statement st = conn.createStatement ();
-            String query = "insert into product" + "values('"+product_code+"','"+product_name+"','"+description+"'.'"+quantityInStock+");";
+            String query = "insert into product (product_name, description, quantityInStock) " + "values('"+product_name+"','"+description+"'.'"+quantityInStock+"');";
             st.executeUpdate(query);
             
      

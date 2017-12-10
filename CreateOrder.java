@@ -14,7 +14,7 @@ public class CreateOrder {
         try {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/order_item?autoReconnect=true&useSSL=false", "root","");      
             Statement st = conn.createStatement ();
-            String query = "insert into customer" + "values('"+order_date+"','"+product_code+");";
+            String query = "insert into order_item (order_date, product_code," + "values('"+order_date+"','"+product_code+");";
             st.executeUpdate(query);
             
      
