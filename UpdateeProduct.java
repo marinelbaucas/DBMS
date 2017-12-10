@@ -1,7 +1,7 @@
 import java.util.*;
 import java.sql.*;
 
-public class UpdateProduct {
+public class UpdateeProduct {
 
 	public static void main(String[] args) {
 
